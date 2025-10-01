@@ -10,20 +10,31 @@ import { sizes } from "@/src/themes/sizes";
 
 
 export const validateEmail = (email: string): boolean => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email.trim());
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email.trim());
 }
 
 export const validatePhone = (phone: string): boolean => {
-  // Cho phép số bắt đầu bằng 0 hoặc +84, chỉ chứa số, độ dài từ 9-11
-  const regex = /^(0\d{9,10}|\+84\d{9,10})$/;
-  return regex.test(phone.trim());
+    // Cho phép số bắt đầu bằng 0 hoặc +84, chỉ chứa số, độ dài từ 9-11
+    const regex = /^(0\d{9,10}|\+84\d{9,10})$/;
+    return regex.test(phone.trim());
 }
 
 // true: hợp lệ, false: không hợp lệ
 export const validateEmailOrPhone = (input: string): boolean => {
-  return validateEmail(input) || validatePhone(input);
+    return validateEmail(input) || validatePhone(input);
 }
+
+export const imageExtensions = [
+    "jpg",
+    "jpeg",
+    "png",
+    "gif",
+    "bmp",
+    "webp",
+    "heic",
+    "svg",
+];
 
 // -----------------------------------------------------------
 

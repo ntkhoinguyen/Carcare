@@ -67,9 +67,11 @@ const borderWidth = {
   xxl: 6,
 };
 
-const heightHeader = 80;
+const heightHeader = 60;
 const heightHeaderModal = 40;
 const heightCreateButton = 40;;
+
+const tabBarHeight = 60;
 
 const appLogoWidth = 120;
 const appLogoHeight = 120;
@@ -117,4 +119,5 @@ export const sizes = {
   heightCreateButton,
   appLogoWidth,
   appLogoHeight,
+  tabBarHeight,
 };

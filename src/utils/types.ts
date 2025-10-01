@@ -56,3 +56,55 @@ export type LoadingIconType = {
   color?: string;
   containerStyle?: object;
 };
+
+export type AttachmentPickerType = {
+  type?: string;
+  multiple?: boolean;
+  onSelect: (uri: string[], isMove: boolean) => void;
+  RenderItem?: React.ComponentType<any>;
+};
+
+export type OptionImageType = {
+  onImage: () => void;
+  onFolder: () => void;
+};
+
+export type RenderCameraType = {
+  onSelect: (uri: string) => void;
+};
+
+export type ModalData = {
+  title: string;
+  animationType: "none" | "slide" | "fade";
+  content: React.ComponentType<any>;
+  containerStyle?: object;
+  contentStyle?: object;
+  onClose?: () => void;
+};
+
+export type ModalWrapperProps = {
+  children: React.ReactNode;
+  visible?: boolean;
+  title?: string;
+  animationType?: "none" | "slide" | "fade";
+  containerStyle?: object;
+  modalContentStyle?: object;
+  onClose?: () => void;
+};
+
+export type ModalAttachmentType = {
+  animationType: "none" | "slide" | "fade";
+  containerStyle?: object;
+};
+
+export type AttachmentsType = {
+  uri: string[];
+  onPreview?: (uri: string) => void;
+  onDelete?: (uri: string) => void;
+};
+
+export type AttachmentType = {
+  uri: string;
+  onPreview?: (uri: string) => void;
+  onDelete?: (uri: string) => void;
+};

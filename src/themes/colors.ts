@@ -77,6 +77,7 @@ const defaultColors = {
   text: "#000000",
   userAskBackground: colors.light_blue,
   warning: "#ffff00",
+  transparent: "transparent",
 };
 
 const lightColors = {
@@ -114,6 +115,7 @@ const darkColors = {
   text: "#f7f7f7",
   userAskBackground: colors.dark_black,
   warning: "#ffff00",
+  transparent: "transparent",
 };
 
 const getColorsByMode = (mode: string) => {
@@ -125,7 +127,7 @@ const getColorsByMode = (mode: string) => {
 };
 
 export {
-    colors,
-    colorsPicker, darkColors,
-    defaultColors, getColorsByMode, lightColors
+  colors,
+  colorsPicker, darkColors,
+  defaultColors, getColorsByMode, lightColors
 };
