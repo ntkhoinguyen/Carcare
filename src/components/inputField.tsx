@@ -175,11 +175,11 @@ export const InputField: React.FC<InputFieldProps> = (props) => {
                         placeholderTextColor={colors.placeHolderText}
                         style={[
                             styles.input,
-                            error && styles.inputError,
                             borderType === "under" && styles.inputUnderline,
                             borderType === "none" && styles.inputNoBorder,
                             multiline && { height: inputHeight },
                             inputStyle,
+                            error && styles.inputError,
                         ]}
                         onFocus={onFocusInput}
                     />
@@ -191,7 +191,7 @@ export const InputField: React.FC<InputFieldProps> = (props) => {
                             styles.rightSection,
                             {
                                 right:
-                                    borderType === "under" ? sizes.margin.xs : sizes.margin.sm,
+                                    borderType === "under" ? sizes.margin.xs : sizes.margin.md,
                             },
                         ]}
                         onPress={onshowPassword}
@@ -281,6 +281,6 @@ const createStyles = (colors: typeof defaultColors, size: typeof sizes) =>
         errorText: {
             color: colors.error,
             marginTop: 4,
-            fontSize: size.fontSize.sm,
+            fontSize: size.fontSize.md,
         },
     });

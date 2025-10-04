@@ -1,4 +1,3 @@
-// LoginScreen.tsx
 import { useRouter } from "expo-router";
 import React, { useMemo, useState } from "react";
 import { Alert, KeyboardAvoidingView, Platform, StyleSheet, Text, View } from "react-native";
@@ -14,9 +13,9 @@ import { validateEmailOrPhone } from "@/src/utils/utils";
 
 const LoginScreen = () => {
     const router = useRouter();
-    const { colors, sizes, t, appName, appVersion } = useAppContext();
+    const { colors, sizes, t, appVersion } = useAppContext();
     const [username, setUsername] = useState("admin@gmail.com");
-    const [password, setPassword] = useState("admin");
+    const [password, setPassword] = useState("123456");
     const [error, setError] = useState<string | undefined>(undefined);
 
     const onForgetPassword = () => {

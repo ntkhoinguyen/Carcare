@@ -1,5 +1,23 @@
 import { TextInputProps } from "react-native";
 
+// --------------- header ------------------------
+export type DetailHeaderType = {
+  options: {
+    title?: string;
+    leftOptions: string[];
+    rightOptions: string[];
+  };
+} & any;
+
+export type LeftDetailHeader = {
+  title?: string;
+  leftOptions: string[];
+};
+
+export type RightDetailHeader = {
+  rightOptions: string[];
+};
+
 // ----------------------------- Icon Symbol -----------------------------
 export type IconType = {
   name: string;
@@ -45,6 +63,20 @@ export type InputFieldProps = TextInputProps & {
   onPress?: () => void;
 };
 
+// ------------------ user info ----------------------
+export type userType = {
+  username: string;
+  password: string;
+};
+
+export type userInfoType = {
+  name: string;
+  birthday: string;
+  email: string;
+  phone: string;
+  loginFaceId: boolean;
+  avatar: string;
+};
 
 // ---------------------------- Component Props -----------------------------
 export type AppLogoType = {
@@ -60,7 +92,7 @@ export type LoadingIconType = {
 export type AttachmentPickerType = {
   type?: string;
   multiple?: boolean;
-  onSelect: (uri: string[], isMove: boolean) => void;
+  onSelect: (uri: string[]) => void;
   RenderItem?: React.ComponentType<any>;
 };
 
@@ -107,4 +139,10 @@ export type AttachmentType = {
   uri: string;
   onPreview?: (uri: string) => void;
   onDelete?: (uri: string) => void;
+};
+
+export type RenderUserAvataType = {
+  url?: string;
+  haveAvatar?: "edit" | "readonly";
+  containerStyles?: object;
 };

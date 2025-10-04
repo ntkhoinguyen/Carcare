@@ -10,14 +10,11 @@ import { InputField } from "@/src/components/inputField";
 import { defaultColors } from "@/src/themes/colors";
 import { sizes } from "@/src/themes/sizes";
 import { useAppContext } from "@/src/useHook/useAppContext";
-// import { useNotification } from "@/src/useHook/useNotification";
 
 const ForgetPassword = () => {
     const router = useRouter();
     const { colors, sizes, t } = useAppContext();
     const styles = useMemo(() => createStyles(colors, sizes), [colors, sizes]);
-
-    //   const { sendNotification } = useNotification();
 
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");

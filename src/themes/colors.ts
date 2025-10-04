@@ -16,7 +16,7 @@ const colors = {
   dark: "#242424",
   grape: "#ae3ec9",
   light: "#f2f2f2",
-  light_gray: "#e6e6e6",
+  light_gray: "#9ea6ae",
   dark_gray: "#404040",
   light_blue: "#add8e6",
   dark_blue: "#00008b",
